@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <!-- 첫 번째 행 100px -->
+            <RowDefinition Height="*"/>
+            <!-- 두 번째 행 나머지 공간 -->
+        </Grid.RowDefinitions>
 
+        <Control Grid.Row="0" />
+
+        <!-- 두 번째 행 안에 3개의 열 -->
+        <Grid Grid.Row="1">
+            <ColumnDefinition Width="*"/>
+            <!-- 첫 번째 열 균등 분할 -->
+            <ColumnDefinition Width="*"/>
+            <!-- 두 번째 열 균등 분할 -->
+            <ColumnDefinition Width="*"/>
+            <!-- 세 번째 열 균등 분할 -->
+            <Control Grid.Column="0" />
+            <!-- 두 번째 행의 두 번째 열에 컨트롤 배치 -->
+            <Control Grid.Column="1" />
+            <!-- 두 번째 행의 세 번째 열에 컨트롤 배치 -->
+            <Control Grid.Column="2" />
+        </Grid>
     </Grid>
 </Window>
